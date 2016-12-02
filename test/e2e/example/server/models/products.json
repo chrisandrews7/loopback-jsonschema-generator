@@ -1,0 +1,44 @@
+{
+  "name": "Products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "title": "Price",
+      "required": true
+    },
+    "addedDate": {
+      "type": "date",
+      "title": "Added Date"
+    },
+    "inStock": {
+      "type": "boolean",
+      "title": "In Stock",
+      "required": true
+    },
+    "tags": {
+      "title": "Tags",
+      "type": [
+        "string"
+      ]
+    },
+    "category": {
+      "type": "Categories",
+      "title": "Category",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

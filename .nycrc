@@ -1,0 +1,19 @@
+{
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "all": true,
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "include": [
+      "src"
+    ]
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "description": "Add a title property",
+    "search": {
+      "key": "title"
+    },
+    "transform": {
+      "key": "title",
+      "func": "returnValue"
+    }
+  },
+  {
+    "description": "Add a required property",
+    "search": {
+      "key": "required"
+    },
+    "transform": {
+      "key": "required",
+      "func": "returnValue"
+    }
+  },
+  {
+    "description": "Add a type property in lowercase",
+    "search": {
+      "key": "type.name"
+    },
+    "transform": {
+      "key": "type",
+      "func": "lowercase"
+    }
+  },
+  {
+    "description": "If the type is boolean then set required to false",
+    "search": {
+      "key": "type.name",
+      "value": "Boolean"
+    },
+    "transform": {
+      "key": "required",
+      "value": false
+    }
+  },
+  {
+    "description": "If the type is date then turn into a string",
+    "search": {
+      "key": "type.name",
+      "value": "Date"
+    },
+    "transform": {
+      "key": "type",
+      "value": "string"
+    }
+  },
+  {
+    "description": "If the type is date then add a format property",
+    "search": {
+      "key": "type.name",
+      "value": "Date"
+    },
+    "transform": {
+      "key": "format",
+      "value": "date-time"
+    }
+  },
+  {
+    "description": "If the property is ModelConstructor then turn into an object",
+    "search": {
+      "key": "type.name",
+      "value": "ModelConstructor"
+    },
+    "transform": {
+      "key": "type",
+      "value": "object"
+    }
+  },
+  {
+    "description": "If any properties are found then run then recur the function",
+    "search": {
+      "key": "type.definition.properties"
+    },
+    "transform": {
+      "key": "properties",
+      "func": "recurProperties"
+    }
+  },
+  {
+    "description": "If the type is an array then add an items property",
+    "search": {
+      "key": "type[0].name",
+      "value": "String|Number"
+    },
+    "transform": {
+      "key": "items.type",
+      "func": "lowercase"
+    }
+  },
+  {
+    "description": "If the type is an array with a type inside then change the type to array",
+    "search": {
+      "key": "type[0].name",
+      "value": "String|Number"
+    },
+    "transform": {
+      "key": "type",
+      "value": "array"
+    }
+  },
+  {
+    "description": "If the type is an array then add an items property and set it to string (Failsafe)",
+    "search": {
+      "key": "type.name",
+      "value": "Array"
+    },
+    "transform": {
+      "key": "items.type",
+      "value": "string"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+env:
+  node: true
+  mocha: true
+
+parser: babel-eslint
+
+extends: airbnb-base
+
+rules:
+  comma-dangle:
+    - 2
+    - never
+  no-param-reassign:
+    - 0
+  no-unused-expressions: 0

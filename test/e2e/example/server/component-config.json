@@ -1,0 +1,6 @@
+{
+  "../../../../src/": {
+    "schema": "http://json-schema.org/draft-04/schema#",
+    "url": "test-json-schema"
+  }
+}

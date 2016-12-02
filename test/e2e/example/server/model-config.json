@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/server/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/server/mixins",
+      "./mixins"
+    ]
+  },
+  "Products": {
+    "dataSource": null,
+    "public": true
+  },
+  "Categories": {
+    "dataSource": null,
+    "public": false
+  }
+}
