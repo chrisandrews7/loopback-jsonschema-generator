@@ -6,8 +6,8 @@
   "scripts": {
     "test": "NODE_ENV=test mocha test/unit --opts mocha.opts",
     "test:watch": "npm test -- -w",
-    "test:coverage": "NODE_ENV=test nyc npm test",
-    "test:report": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls",
+    "test:coverage": "NODE_ENV=test nyc report npm test",
+    "test:report": "NODE_ENV=test npm run test:coverage -- --reporter=text-lcov | coveralls",
     "test:e2e": "NODE_ENV=test mocha test/e2e --opts mocha.opts",
     "clean": "rimraf dist/*",
     "lint": "eslint .",
