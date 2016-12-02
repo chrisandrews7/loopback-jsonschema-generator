@@ -47,11 +47,11 @@ Add the following configuration to `component-config.js` inside your loopback pr
     "name": "Products",
     "base": "PersistedModel",
     "properties": {
-    "name": {
-      "type": "string",
-      "title": "Name",
-      "required": true
-    }
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "required": true
+        }
     },
     "validations": [],
     "relations": {},
@@ -66,17 +66,17 @@ Add the following configuration to `component-config.js` inside your loopback pr
 
 ```json
 {
-    $schema: 'http://json-schema.org/draft-04/schema#',
-    title: 'Products',
-    type: 'object',
-    properties: {
-      name: {
-        type: 'string',
-        title: 'Name'
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Products",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name"
       }
     },
-    required: [
-      'name'
+    "required": [
+      "name"
     ]
 }
 ```

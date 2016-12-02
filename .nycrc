@@ -1,5 +1,6 @@
 {
     "reporter": [
+      "lcov",
       "html",
       "text"
     ],
@@ -9,7 +10,7 @@
     "branches": 100,
     "all": true,
     "require": [
-      "babel-register"
+      "babel-core/register"
     ],
     "sourceMap": false,
     "instrument": false,
