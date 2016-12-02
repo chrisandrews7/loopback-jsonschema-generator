@@ -1,6 +1,6 @@
 # Loopback JSON Schema Generator
 
-[![Build Status](https://travis-ci.org/chrisandrews7/loopback-jsonschema-generator.svg?branch=master)](https://travis-ci.org/chrisandrews7/loopback-jsonschema-generator) [![Coverage Status](https://coveralls.io/repos/github/chrisandrews7/loopback-jsonschema-generator/badge.svg?branch=master)](https://coveralls.io/github/chrisandrews7/loopback-jsonschema-generator?branch=master)
+[![Build Status](https://travis-ci.org/chrisandrews7/loopback-jsonschema-generator.svg?branch=master)](https://travis-ci.org/chrisandrews7/loopback-jsonschema-generator) [![Coverage Status](https://coveralls.io/repos/github/chrisandrews7/loopback-jsonschema-generator/badge.svg?branch=master)](https://coveralls.io/github/chrisandrews7/loopback-jsonschema-generator?branch=master) [![npm version](https://img.shields.io/npm/v/loopback-jsonschema-generator.svg?style=flat)](https://www.npmjs.com/package/loopback-jsonschema-generator)
 
 Generates JSON schemas for your [LoopBack](https://github.com/strongloop/loopback) models
 
