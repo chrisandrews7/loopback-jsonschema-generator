@@ -17,8 +17,8 @@ Add the following configuration to `component-config.js` inside your loopback pr
 
 ```json
 {
-  "loopback-jsonschema-generator": {}
-  ...
+  "loopback-jsonschema-generator": {},
+  "..."
 }
 ```
 
@@ -32,14 +32,14 @@ Add the following configuration to `component-config.js` inside your loopback pr
   "loopback-jsonschema-generator": {
     "schema": "http://json-schema.org/draft-04/schema",
     "url": "json-schema"
-  }
-  ...
+  },
+  "..."
 }
 ```
 
 ## Using
 
-### Define a model inside loopback
+### Define a model inside loopback as normal
 
 ```json
 # products.json
@@ -60,7 +60,7 @@ Add the following configuration to `component-config.js` inside your loopback pr
 }
 ```
 
-### Access the JSON schema url
+### Access the generated JSON schema url
 
 `http://yourapi.com/api/products/json-schema`
 

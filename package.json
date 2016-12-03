@@ -1,7 +1,7 @@
 {
   "name": "loopback-jsonschema-generator",
-  "version": "1.0.0",
-  "description": "Adds JSON schema endpoints for each Loopback model",
+  "version": "1.0.1",
+  "description": "Generates JSON schemas for your Loopback models",
   "main": "dist",
   "scripts": {
     "test": "NODE_ENV=test mocha test/unit --opts mocha.opts",
@@ -11,7 +11,7 @@
     "test:e2e": "NODE_ENV=test mocha test/e2e --opts mocha.opts",
     "clean": "rimraf dist/*",
     "lint": "eslint .",
-    "build": "NODE_ENV=production babel src -d dist",
+    "build": "NODE_ENV=production babel src -d dist -D",
     "prepublish": "npm run clean && npm run build"
   },
   "repository": {
@@ -20,6 +20,17 @@
   },
   "author": "Chris Andrews",
   "license": "ISC",
+  "keywords": [
+    "loopback",
+    "json-schema",
+    "json",
+    "schema",
+    "json schema",
+    "jsonschema",
+    "generator",
+    "strongloop",
+    "component"
+  ],
   "bugs": {
     "url": "https://github.com/chrisandrews7/loopback-jsonschema-generator/issues"
   },
