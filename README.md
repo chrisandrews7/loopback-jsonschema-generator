@@ -81,6 +81,18 @@ Add the following configuration to `component-config.js` inside your loopback pr
 }
 ```
 
+### Programmatic access to the json schema
+
+A property is added onto each model under `model.schema`
+
+```js
+# Model file
+module.exports = function(Products) {
+  const jsonSchema = Products.schema;
+  //...
+};
+```
+
 ## References
 
 http://json-schema.org/
