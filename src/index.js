@@ -8,10 +8,10 @@ export default (app, opts) => {
   });
 
   each(app.models, (model) => {
-    model.jsonSchema = (cb) => {
-      const schema = generate(model, options);
-      cb(null, schema);
-    };
+    model.schema = generate(model, options);
+
+    model.jsonSchema = cb =>
+      cb(null, model.schema);
 
     model.remoteMethod(
       'jsonSchema',

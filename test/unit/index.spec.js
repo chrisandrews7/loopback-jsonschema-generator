@@ -22,6 +22,13 @@ describe('Index', () => {
     sandbox.restore();
   });
 
+  it('should expose a schema property with the jsonSchema on every model', () => {
+    sandbox.stub(schema, 'generate').returns('testSchemaProperty');
+    jsonSchema({ models: [model] });
+
+    expect(model.schema).to.equal('testSchemaProperty');
+  });
+
   it('should add a jsonSchema method onto every model', () => {
     jsonSchema({ models: [model] });
     /* eslint-disable no-unused-expressions */
