@@ -1,6 +1,6 @@
 {
   "name": "loopback-jsonschema-generator",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Generates JSON schemas for your Loopback models",
   "main": "dist",
   "scripts": {

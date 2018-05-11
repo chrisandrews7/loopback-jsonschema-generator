@@ -8,13 +8,13 @@ export default (app, opts) => {
   });
 
   each(app.models, (model) => {
-    model.jsonSchema = (cb) => {
-      const schema = generate(model, options);
-      cb(null, schema);
-    };
+    model.jsonSchema = generate(model, options);
+
+    model.getJsonSchema = cb =>
+      cb(null, model.jsonSchema);
 
     model.remoteMethod(
-      'jsonSchema',
+      'getJsonSchema',
       {
         description: 'Get the json schema for the given loopback model.',
         accessType: 'READ',

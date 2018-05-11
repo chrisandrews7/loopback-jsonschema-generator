@@ -22,17 +22,24 @@ describe('Index', () => {
     sandbox.restore();
   });
 
-  it('should add a jsonSchema method onto every model', () => {
+  it('should expose a schema property with the jsonSchema on every model', () => {
+    sandbox.stub(schema, 'generate').returns('testSchemaProperty');
+    jsonSchema({ models: [model] });
+
+    expect(model.jsonSchema).to.equal('testSchemaProperty');
+  });
+
+  it('should add a getJsonSchema method onto every model', () => {
     jsonSchema({ models: [model] });
     /* eslint-disable no-unused-expressions */
-    expect(model.jsonSchema).to.be.ok;
+    expect(model.getJsonSchema).to.be.ok;
   });
 
   it('should call the generate json schema function with the correct arguements on call of jsonSchema', (done) => {
     const spy = sandbox.spy(schema, 'generate');
     jsonSchema({ models: [model] });
 
-    model.jsonSchema(() => {
+    model.getJsonSchema(() => {
       const call = spy.getCall(0);
       expect(call.args[0]).to.deep.equal(model);
       done();
@@ -43,7 +50,7 @@ describe('Index', () => {
     sandbox.stub(schema, 'generate').returns('testSchema');
     jsonSchema({ models: [model] });
 
-    model.jsonSchema((err, result) => {
+    model.getJsonSchema((err, result) => {
       expect(err).to.equal(null);
       expect(result).to.equal('testSchema');
       done();
@@ -55,7 +62,7 @@ describe('Index', () => {
 
     const args = model.remoteMethod.getCall(0).args;
 
-    expect(args[0]).to.equal('jsonSchema');
+    expect(args[0]).to.equal('getJsonSchema');
     expect(args[1].isStatic).to.equal(true);
     expect(args[1].accessType).to.equal('READ');
     expect(args[1].returns.root).to.equal(true);
